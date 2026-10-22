@@ -1,4 +1,7 @@
-public interface IVehicle
+namespace AbstractFactory
 {
+    public interface IVehicle
+    {
 
+    }
 }
