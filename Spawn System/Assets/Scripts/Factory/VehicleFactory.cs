@@ -9,7 +9,7 @@ namespace AbstractFactory
         
         public VehicleFactory(VehicleRequirements requirements)
         {
-            _factory = requirements.HasEngine ? (IVehicleFactory)new MotorVehicleFactory() : new Cyclefactory();
+            _factory = requirements.HasEngine ? (IVehicleFactory)new MotorVehicleFactory() : new CycleFactory();
             _requirements = requirements;
         }
         public override IVehicle Create()
