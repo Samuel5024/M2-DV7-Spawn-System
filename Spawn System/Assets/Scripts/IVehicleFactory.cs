@@ -1,6 +1,9 @@
-using UnityEngine;
+using System;
 
-public interface IVehicleFactory
+namespace AbstractFactory
 {
-    IVehicle Create(VehicleRequirements requirements);
+    public interface IVehicleFactory
+    {
+        IVehicle Create(VehicleRequirements requirements);
+    }
 }
