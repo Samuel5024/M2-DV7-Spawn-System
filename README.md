@@ -1,2 +1,2 @@
-# M2 DV7 Spawn System
+# M2 DV7: Spawn System
 
