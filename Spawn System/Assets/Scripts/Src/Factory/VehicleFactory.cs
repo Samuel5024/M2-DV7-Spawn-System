@@ -1,5 +1,3 @@
-using AbstractFactory;
-
 namespace AbstractFactory
 {
     public class VehicleFactory : AbstractVehicleFactory
