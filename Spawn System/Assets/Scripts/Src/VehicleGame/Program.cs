@@ -16,7 +16,7 @@ namespace VehicleGame
             var wheels = Console.ReadLine();
             int wheelCount = 0;
 
-            if (!int.TryParse(requirements, out wheelCount))
+            if (!int.TryParse(wheels, out wheelCount))
             {
                 wheelCount = 1;
             }
@@ -74,7 +74,7 @@ namespace VehicleGame
 
         private static IVehicle GetVehicle(VehicleRequirements requirements)
         {
-            var factory = new IVehicleFactory(requirements);
+            var factory = new VehicleFactory(requirements);
             return factory.Create();
         }
     }
