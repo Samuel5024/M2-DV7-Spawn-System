@@ -1,4 +1,4 @@
-namespace AbstractFactroy
+namespace AbstractFactory
 {
     public abstract class AbstractVehicleFactory
     {
