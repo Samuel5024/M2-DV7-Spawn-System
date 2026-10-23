@@ -1,29 +1,33 @@
 using System;
 using System.Globalization;
 using AbstractFactory;
+using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 namespace VehicleGame
 {
-    class Program
+    class Program : MonoBehaviour
     {
-        static void Main(string[] args)
+        void Start()
         {
+            int wheelCount = 0;
             var requirements = new VehicleRequirements();
 
-            Console.WriteLine("To Build a Vehicle answer the following questions");
+            Debug.Log("To Build a Vehicle answer the following questions");
 
-            Console.WriteLine("How many wheels do you have ");
-            var wheels = Console.ReadLine();
-            int wheelCount = 0;
+            Debug.Log("How many wheels do you have: ");
+            var wheels = 5;
+            
 
-            if (!int.TryParse(wheels, out wheelCount))
-            {
-                wheelCount = 1;
-            }
+            // if (!int.TryParse(wheels, out wheelCount))
+            // {
+            //     wheelCount = 1;
+            // }
 
             requirements.NumberOfWheels = wheelCount;
 
-            Console.WriteLine("Do you have an engine (Y/n)");
+            Debug.Log("Do you have an engine (Y/n)");
             var engine = Console.ReadLine();
             switch (engine.ToLower())
             {
@@ -43,10 +47,10 @@ namespace VehicleGame
             var passengers = Console.ReadLine();
             var passengerCount = 0;
 
-            if (!int.TryParse(passengers, out passengerCount))
-            {
-                passengerCount = 1;
-            }
+            // if (!int.TryParse(passengers, out passengerCount))
+            // {
+            //     passengerCount = 1;
+            // }
 
             requirements.Passengers = passengerCount;
 
@@ -69,7 +73,7 @@ namespace VehicleGame
 
             var vehicle = GetVehicle(requirements);
 
-            Console.WriteLine(vehicle.GetType().Name);
+            // Console.WriteLine(vehicle.GetType().Name);
         }
 
         private static IVehicle GetVehicle(VehicleRequirements requirements)
